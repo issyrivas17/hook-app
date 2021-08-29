@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; 
-import { RealExampleRef } from './components/04-useRef/RealExampleRef';
+/* import { RealExampleRef } from './components/04-useRef/RealExampleRef'; */
+import { Layout } from './components/05-useLayoutEffect/Layout';
 /* import { FocusScreen } from './components/04-useRef/FocusScreen'; */
 
 /* import { MultipleCustomHooks } from './components/03-examples/MultipleCustomHooks'; */
@@ -15,7 +16,7 @@ import { RealExampleRef } from './components/04-useRef/RealExampleRef';
 
 ReactDOM.render(
  
-    <RealExampleRef/>, 
+    < Layout/>, 
   document.getElementById('root')
 );
 
