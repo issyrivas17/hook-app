@@ -21,7 +21,15 @@ useEffect (() => {
 localStorage.setItem('todos',JSON.stringify(todos)) 
 },[todos])
 
-console.log(description);  
+const handleDelete = (todoId) => {
+
+const action = {
+    type: 'delete',
+    payload: todoId
+}
+dispatch (action); 
+
+}
 
  const handleSubmit = (e) => {
 e.preventDefault(); 
@@ -64,6 +72,7 @@ reset ();
                                 
                                 <button
                                 className = 'btn btn-danger'
+                                onClick= {()=> handleDelete(todo.id)}
                                 >Borrar</button>
                                 
                                 </li>
