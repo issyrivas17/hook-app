@@ -29,6 +29,14 @@ const action = {
 }
 dispatch (action); 
 
+const handleToggle = (todoId) => {
+
+dispatch({
+    type: 'toggle',
+    payload:todoId 
+})
+
+}
 }
 
  const handleSubmit = (e) => {
@@ -68,7 +76,11 @@ reset ();
                             key= {todo.id}
                             className= 'list-group-item'
                             > 
-                                <p className ='text-center'>{i+1}.{todo.desc} </p>
+                                <p 
+                                className=''
+                                onClick = {() =>handleToggle (todo.id)} 
+                                
+                                >{i+1}.{todo.desc} </p>
                                 
                                 <button
                                 className = 'btn btn-danger'
