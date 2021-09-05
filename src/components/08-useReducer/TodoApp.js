@@ -28,15 +28,14 @@ const action = {
     payload: todoId
 }
 dispatch (action); 
-
+} 
 const handleToggle = (todoId) => {
-
-dispatch({
-    type: 'toggle',
-    payload:todoId 
-})
-
-}
+  
+    const action = {
+        type: 'toggle', 
+        payload:todoId
+    }
+ dispatch (action); 
 }
 
  const handleSubmit = (e) => {
@@ -77,9 +76,8 @@ reset ();
                             className= 'list-group-item'
                             > 
                                 <p 
-                                className=''
-                                onClick = {() =>handleToggle (todo.id)} 
-                                
+                                className= {`${todo.done && 'complete'}` }
+                                onClick={ ()=>handleToggle(todo.id)}
                                 >{i+1}.{todo.desc} </p>
                                 
                                 <button
