@@ -68,9 +68,12 @@ reset ();
 
                     <div className ='row'> 
                     <div className = 'col-7'> 
+                    {/*TodoList,Todos,handleDelete,handToggle*/}
                     <ul className ='list-group list-group-flush' >
                     {
-                        todos.map ( (todo,i) => (
+                        todos.map ( (todo,i) => ( 
+                            //TodoListItem, todo, index, handleDelete, handleToggle
+
                             <li 
                             key= {todo.id}
                             className= 'list-group-item'
