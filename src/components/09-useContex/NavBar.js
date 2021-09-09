@@ -1,21 +1,19 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom'
 
 export const NavBar = () => {
     return (
-        <nav>
-            <ul>
-                    <li>
-                        <a href='./'>Home</a>
-                    </li>  
-                
-                    <li>
-                    <a href='./about'>About</a>
-                        </li>  
-
-                    <li>
-                    <a href='./login'>Login</a>
-                        </li>
-            </ul>
-        </nav>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
+          <Link to = '/'className="navbar-brand">UseContex</Link> 
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+            <Link to='/' className="nav-link active" aria-current="page">Home</Link>
+              <Link to ='/about' className="nav-link">About</Link>
+              <Link to ='/login'className="nav-link">Login</Link>
+            </div>
+          </div>
+        </div>
+      </nav>
     )
 }
